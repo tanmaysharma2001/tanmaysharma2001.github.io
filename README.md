@@ -1,5 +1,5 @@
 # Personal Website - Tanmay Sharma  
-The Link to the deployed project can be found here: https://tanmaysharma2001.github.io/cv/  
+The Link to the deployed project can be found here: https://tanmaysharma2001.github.io/  
   
 History:
  - Deployed the website using HTML & CSS
