@@ -10,7 +10,7 @@
 <div class="top-container">
     <Weather />
 
-    <img class="top-cloud" src="images/cloud.png" {alt} />
+    <img class="top-cloud" {src} {alt} />
     <br />
     <br />
     <br />
