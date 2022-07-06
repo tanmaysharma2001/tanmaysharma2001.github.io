@@ -1,0 +1,105 @@
+{
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "start-6772c271.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_index-64632cf9.js"
+    ],
+    "dynamicImports": [
+      "src/routes/__layout.svelte",
+      ".svelte-kit/runtime/components/error.svelte",
+      "src/routes/about.svelte",
+      "src/routes/contact.svelte",
+      "src/routes/index.svelte",
+      "src/routes/skills.svelte"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "pages/__layout.svelte-3723e276.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-64632cf9.js"
+    ],
+    "css": [
+      "assets/pages/__layout.svelte-c45a1fee.css"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "error.svelte-19b91435.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-64632cf9.js"
+    ]
+  },
+  "src/routes/about.svelte": {
+    "file": "pages/about.svelte-d7deefea.js",
+    "src": "src/routes/about.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-64632cf9.js",
+      "_env-5493c761.js"
+    ],
+    "css": [
+      "assets/pages/about.svelte-4c3ece3a.css"
+    ],
+    "assets": [
+      "assets/tanmay-ed8667fa.jpg"
+    ]
+  },
+  "src/routes/contact.svelte": {
+    "file": "pages/contact.svelte-896651eb.js",
+    "src": "src/routes/contact.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-64632cf9.js",
+      "_env-5493c761.js"
+    ],
+    "css": [
+      "assets/pages/contact.svelte-20b073a0.css"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "pages/index.svelte-ab09a916.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-64632cf9.js"
+    ],
+    "css": [
+      "assets/pages/index.svelte-1d9b7922.css"
+    ],
+    "assets": [
+      "assets/mountain-67ef352d.png"
+    ]
+  },
+  "src/routes/skills.svelte": {
+    "file": "pages/skills.svelte-c7cd5c35.js",
+    "src": "src/routes/skills.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-64632cf9.js",
+      "_env-5493c761.js"
+    ],
+    "css": [
+      "assets/pages/skills.svelte-9198a825.css"
+    ],
+    "assets": [
+      "assets/web-link-61f914d3.png"
+    ]
+  },
+  "_index-64632cf9.js": {
+    "file": "chunks/index-64632cf9.js"
+  },
+  "_env-5493c761.js": {
+    "file": "chunks/env-5493c761.js"
+  }
+}
