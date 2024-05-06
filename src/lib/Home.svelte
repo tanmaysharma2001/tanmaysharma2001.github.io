@@ -1,5 +1,5 @@
 <script>
-    import '../app.css'
+  import "../app.css";
 </script>
 
 <main>
@@ -16,12 +16,21 @@
     </p>
 
     <a href="https://www.x.com" class="xdot-com" id="xdot-com"></a>
-    <!-- <span
-          class="xdot-com"
-          style="color: white; cursor: pointer;"
-          on:click="window.location.href='https://twitter.com/me_tanmay01';"
-        >
-          x dot com
-        </span> -->
+    <div class="flex flex-col space-y-2">
+      <a
+      class="xdot-com text-lg w-[100px]"
+      style="color: white; cursor: pointer;"
+      href="https://twitter.com/me_tanmay01"
+    >
+      x dot com
+    </a>
+    <a
+      class="xdot-com text-lg w-[70px]"
+      style="color: white; cursor: pointer;"
+      href="https://github.com/tanmaysharma2001"
+    >
+      github
+    </a>
+    </div>
   </div>
 </main>

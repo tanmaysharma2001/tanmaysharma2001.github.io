@@ -74,8 +74,8 @@ body {
 }
 
 .xdot-com {
-  padding-top: 2em;
-  font-size: 0.8em;
+  /* padding-top: 2em; */
+  /* font-size: 0.8em; */
   text-decoration: underline;
   text-decoration-thickness: 0.2px; /* Adjust the thickness as needed */
   text-decoration-color: #ffffff; /* Set the color of the underline */
