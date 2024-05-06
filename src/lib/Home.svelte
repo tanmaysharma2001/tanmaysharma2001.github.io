@@ -1,6 +1,5 @@
 <script>
     import '../app.css'
-    import typewriter from './typewriter';
 </script>
 
 <main>
@@ -26,7 +25,3 @@
         </span> -->
   </div>
 </main>
-
-<style lang="postcss">
-
-</style>
