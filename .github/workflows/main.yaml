@@ -1,38 +1,59 @@
-name: Build and Deploy Svelte Site
+name: CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  CI: false
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+      pages: 'write'
+      actions: 'write'
+      checks: 'write'
+      deployments: 'write'
+    strategy:
+      matrix:
+        node-version: [18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - uses: actions/checkout@v4
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20.x'
-      - run: |
-          npm install -g pnpm
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Build site
-        run: pnpm run build
-
-      - name: Copy dist folder to gh-pages branch
-        run: |
-          git checkout --orphan gh-pages
-          git rm -rf .
-          git checkout main dist
-          mv dist/* .
-          git add .
-          git commit -m "Deploy to gh-pages"
-          git push origin gh-pages --force
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - name: Install dependencies
+      # Using npm ci is generally faster than running npm i because it caches dependencies
+      run: |
+        npm i -g pnpm
+        pnpm i
+    - name: Build the app
+      run: |
+        pnpm run build
+        
+    - name: Setup Pages
+      uses: actions/configure-pages@v3
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        # Upload build directory content
+        path: 'dist/'
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v1
+      env:  
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
