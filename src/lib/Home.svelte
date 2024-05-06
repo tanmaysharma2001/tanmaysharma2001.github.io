@@ -9,7 +9,7 @@
       ></span>
     </p>
     <p class="text-lg">
-      Hi! My name is Tanmay and I am a CS student with background in Python and
+      Hi! My name is tanmay and I am a CS student with background in Python and
       Rust. Interests <br />
       include, but are not limited to NLP, data-intensive backends, compilers, photography,
       music.
